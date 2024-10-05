@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Удачная ферма shop</title>
+    <link rel="icon" href="https://i.ibb.co.com/P18BBG6/image.jpg" type="image/x-icon">
+    <style>
+body {
+    background-image: url('https://wallpaper.forfun.com/fetch/56/563fe244bbe936a6cf3b5ae8534dd736.jpeg?w=1000&r=0.5625');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+        /* Стили для кнопок */
+        button {
+            background-color: #228B22;
+            color: white;
+            border: none;
+            border-radius: 5%;
+            padding: 10px 20px;                                                                                                                            
+            cursor: pointer;
+        }
+
+        #top-panel input[type="text"] {
+            width: 60%;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        #top-panel button:hover, #top-panel input[type="text"]:hover {
+            transform: scale(1.01);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .cube {
+            background-color: #333;
+            border: 2px solid #999;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .cart-item,
+        .product-item {
+        }
+        .cube {
+            background-color: #333;
+            border: 2px solid #999;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .cart-item, .product-item {
+        }
+                input[type="text"] {
+            padding: 10px;
+            border: 2px solid #999;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        .buutton {
+    background-image: url('https://i.ibb.co.com/KGLktKh/OIP-1.jpg'); /* Замените на фактический URL вашей текстуры */
+    background-size: cover; /* Растягивает текстуру на всю кнопку */
+    width: 35px; /* Задайте ширину кнопки */
+    height: 35px; /* Задайте высоту кнопки */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    margin-top: 3px; /* Добавляем отступ сверху */
+    transform: scale(1.01);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+        .buuiton {
+    background-image: url('https://i.ibb.co.com/Cs88dmc/22c94598-81d9-4657-856d-8be92796090d.jpg'); /* Замените на фактический URL вашей текстуры */
+    background-size: cover; /* Растягивает текстуру на всю кнопку */
+    width: 33px; /* Задайте ширину кнопки */
+    height: 35px; /* Задайте высоту кнопки */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    margin-top: 3px; /* Добавляем отступ сверху */
+    transform: scale(1.01);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+}
+        .hole {
+            width: 60px;
+            height: 48px;
+            background-image: url('https://i.ibb.co.com/hmvHHqD/image.png'); /* Замените на URL вашей текстуры для ямки */
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .filled {
+            background-image: url('https://i.ibb.co.com/hmvHHqD/image.pnghttps://i.ibb.co.com/hmvHHqD/image.png'); /* Замените на URL вашей текстуры для заполненной ямки */
+        }
+        .checkout-form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid gray; /* Серая рамка */
+    border-radius: 10px;
+    background-color: white; /* Чёрный фон */
+    color: black; /* Белый текст */
+}
+        #timer {
+            color: black; /* Черный цвет текста */
+        }
+                #filterForm {
+            display: none;
+        }
+                .registration-form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+        }
+        .registration-form input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .registration-form button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .registration-form button:hover {
+            background-color: #0056b3;
+        }
+                .registration-form {
+            display: none; /* Скрыть форму по умолчанию */
+            flex-direction: column;
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+        }
+        .registration-form input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .registration-form button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .registration-form button:hover {
+            background-color: #0056b3;
+        }
+
+                #regForm {
+            display: none;
+        }
+
+                #loginForm {
+            display: none;
+        }
+
+        #avatar {
+            border-radius: 50%; /* Делает изображение круглым */
+            width: 50px; /* Устанавливает ширину аватарки */
+            height: 50px; /* Устанавливает высоту аватарки */
+        }
+
+        #profile { 
+            gap: 10px; /* Добавляет пробел между аватаркой и именем пользователя */
+        }
+
+        #registrationForm {
+            display: none;
+        }
+
+        #password {
+            padding: 10px;
+            border: 2px solid #999;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            50% {opacity: 1;}
+            100% {opacity: 2;}
+        }
+
+        #myElement {
+            animation-name: fadeIn;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+</style>
+<script>
+            window.onload = function() {
+            document.getElementById('myElement').style.animationPlayState = 'running';
+        };
+
+var cart = {
+    items: [],
+    addItem: function(item) {
+
+        var existingItem = this.items.find(function(i) {
+            return i.name === item.name;
+        });
+        if (existingItem) {
+            alert('Товар уже в корзине');
+        } else {
+            this.items.push(item);
+            this.updateCartUI();
+            this.saveCartToLocalStorage();
+        }
+    },
+    removeItem: function(index) {
+        this.items.splice(index, 1);
+        this.updateCartUI();
+        this.saveCartToLocalStorage();
+    },
+    clearCart: function() {
+        this.items = [];
+        this.updateCartUI();
+        this.saveCartToLocalStorage();
+    },
+    saveCartToLocalStorage: function() {
+        localStorage.setItem('cart', JSON.stringify(this.items));
+    },
+    loadCartFromLocalStorage: function() {
+        this.items = JSON.parse(localStorage.getItem('cart')) || [];
+    },
+    toggleCart: function() {
+        var cartElement = document.getElementById('cart');
+        cartElement.style.display = cartElement.style.display === 'none' ? '' : 'none';
+    },
+    updateCartUI: function() {
+        var cartElement = document.getElementById('cart');
+        cartElement.innerHTML = '';
+        this.items.forEach(function(item, index) {
+            cartElement.innerHTML += '<p>Название: ' + item.name + '</p>';
+            cartElement.innerHTML += '<p>Описание: ' + item.description + '</p>';
+            cartElement.innerHTML += '<p>Цена: ' + item.price + ' тенге</p>';
+            cartElement.innerHTML += '<button onclick="cart.removeItem(' + index + ')">Удалить</button><br><br>';
+            var message = 'Здравствуйте, хочу заказать ' + item.name;
+            cartElement.innerHTML += '<a href="https://wa.me/+77479750816?text=' + encodeURIComponent(message) + '" target="_blank"><button>Оформить покупку</button></a><br><br>';
+        });
+        cartElement.innerHTML += '<button onclick="cart.clearCart()">Удалить всё</button><br><br>';
+    }
+};
+
+window.onload = function() {
+    cart.loadCartFromLocalStorage();
+};
+
+var products = [
+            { name: 'Альба', description: 'Сорт клубники "Альба"', price: 500 },
+            { name: 'Дюк', description: 'Сорт голубики "Дюк"', price: 6000 },
+            { name: 'Августин', description: 'Сорт винограда "Августин"', price: 1300 },
+            { name: 'Осейдж', description: 'Сорт еживики "Осейдж"', price: 1500 },
+            { name: 'Чудо', description: 'Сорт вишни "Чудо"', price: 1800 },
+            { name: 'Царский', description: 'Сорт абрикос "Царский"', price: 1800 },
+            { name: 'Ираморная', description: 'Сорт груши "Мраморная"', price: 1800 },
+            { name: 'Ламарка', description: 'Сорт ирги "Ламарка"', price: 2200 },
+            { name: 'Бен Лир', description: 'Сорт Клюква "Бен Лир"', price: 2000 }
+];
+
+function addToCart(name, description, price) {
+    var item = {name: name, description: description, price: price};
+    var cart = getCartData();
+    cart.push(item);
+
+    // Сохраняем обновленные данные корзины в localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Функция для обновления корзины
+function updateCart() {
+    var cart = getCartData();
+
+    // Здесь должен быть ваш код для обновления данных корзины
+    updateCartUI(cart);
+
+    // Сохраняем обновленные данные корзины в localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+var searchHistory = [];
+
+function searchProducts() {
+    var searchInput = document.getElementById('searchInput').value;
+    var searchResults = products.filter(product => product.name.includes(searchInput));
+
+    // Add the search results to the search history
+    searchHistory.push(...searchResults);
+
+    var searchResultsElement = document.getElementById('searchResults');
+    searchResultsElement.innerHTML = '';
+
+    searchResults.forEach((product, index) => {
+        var productElement = document.createElement('div');
+        productElement.innerHTML = `<p>${product.name}</p><p>${product.description}</p><p>${product.price} тенге</p><p>${product.category}</p><button onclick='cart.addItem(${JSON.stringify(product)})'>Добавить в корзину</button>`;
+        searchResultsElement.appendChild(productElement);
+    });
+
+    // Add the "Hide Search History" button
+    var hideButton = document.createElement('button');
+    hideButton.onclick = hideSearchHistory;
+    hideButton.textContent = 'Скрыть историю поиска';
+    searchResultsElement.appendChild(hideButton);
+}
+
+function hideSearchHistory() {
+    searchHistory = [];
+    document.getElementById('searchResults').innerHTML = '';
+}
+
+function hideFromSearchHistory(index) {
+    searchHistory[index].hidden = true;
+    // Re-render the search results
+    searchProducts();
+}
+
+function deleteFromSearchHistory(index) {
+    searchHistory.splice(index, 1);
+    // Re-render the search results
+    searchProducts();
+}
+
+function toggleSettings() {
+    var settingsElement = document.getElementById('settings');
+    settingsElement.style.display = settingsElement.style.display === 'none' ? 'block' : 'none';
+}
+
+function changeColor(color) {
+    document.body.style.backgroundColor = color;
+}
+
+        var products = [
+            { name: 'Альба', description: 'Сорт клубники "Альба"', price: 500, category: 'Клубника' },
+            { name: 'Дюк', description: 'Сорт голубики "Дюк"', price: 6000, category: 'Голубика' },
+            { name: 'Августин', description: 'Сорт винограда "Августин"', price: 1300, category: 'Виноград' },
+            { name: 'Осейдж', description: 'Сорт еживики "Осейдж"', price: 1500, category: 'Еживика' },
+            { name: 'Чудо', description: 'Сорт вишни "Чудо"', price: 1800, category: 'Вишня' },
+            { name: 'Царский', description: 'Сорт абрикос "Царский"', price: 1800, category: 'Абрикос' },
+            { name: 'Ираморная', description: 'Сорт груши "Мраморная"', price: 1800, category: 'Груша' },
+            { name: 'Ламарка', description: 'Сорт ирги "Ламарка"', price: 2200, category: 'Ирга' },
+            { name: 'Бен Лир', description: 'Сорт Клюква "Бен Лир"', price: 2000, category: 'Клюква' }
+        ];
+
+        function toggleFilterForm() {
+            var filterForm = document.getElementById('filterForm');
+            if (filterForm.style.display === "none") {
+                filterForm.style.display = "block";
+            } else {
+                filterForm.style.display = "none";
+            }
+        }
+
+        function applyFilter() {
+            var category = document.getElementById('category').value;
+            var price = document.getElementById('price').value;
+
+            var filteredProducts = products.filter(product => 
+                (!category || product.category === category) &&
+                (!price || product.price <= Number(price))
+            );
+
+            displayProducts(filteredProducts);
+        }
+
+        function addProduct() {
+            var name = document.getElementById('productInput').value;
+            var newProduct = { name: name, description: 'Описание товара', price: 1000, category: 'Категория' };
+            products.push(newProduct);
+            displayProducts(products);
+        }
+
+function addToCart(name, description, price) {
+    cart.addItem({name: name, description: description, price: price});
+}
+
+function displayProducts(products) {
+    var productsElement = document.getElementById('products');
+    productsElement.innerHTML = '';
+
+    products.forEach(product => {
+        var productElement = document.createElement('div');
+        productElement.innerHTML = `<p>${product.name}</p><p>${product.description}</p><p>${product.price} тенге</p><p>${product.category}</p><button onclick='cart.addItem(${JSON.stringify(product)})'>Добавить в корзину</button>`;
+        productsElement.appendChild(productElement);
+    });
+}
+
+
+var avatars = [
+    'https://i.ibb.co.com/py4m4bC/fruits-6357256-640.jpg',
+    'https://i.ibb.co.com/LNZv8hd/plant-8432181-640.jpg',
+    'https://i.ibb.co.com/MpCGW8c/raspberries-5576401-640.jpg',
+    'https://cdn.pixabay.com/photo/2018/05/26/10/54/strawberries-3431122_640.jpg',
+    'https://cdn.pixabay.com/photo/2023/08/15/14/36/fruit-8192071_640.jpg'
+];
+
+function registerUser() {
+    var name = document.getElementById('name').value;
+    var login = document.getElementById('login').value;
+    var password = document.getElementById('password').value;
+
+    if (name && login && password) {
+        var existingUser = JSON.parse(localStorage.getItem('userData'));
+        if (existingUser && existingUser.login === login) {
+            alert('Такой пользователь уже существует!');
+            return;
+        }
+
+        if (password.length < 8) {
+            alert('Пароль должен содержать более 8 символов!');
+            return;
+        }
+
+        var user = {
+            name: name,
+            login: login,
+            password: password,
+            avatar: avatars[Math.floor(Math.random() * avatars.length)],
+            cart: cart.items
+        };
+
+if (name === 'Удачная Ферма' && login === 'Admin321' && password === '123_YF_123') {
+    user.isAdmin = true;
+    user.avatar = 'https://i.ibb.co.com/P18BBG6/image.jpg'; // Укажите путь к изображению аватара администратора
+    alert('Добро пожаловать, администратор!');
+} else {
+    user.avatar = 'https://i.ibb.co.com/P18BBG6/image.jpg'; // Укажите путь к изображению аватара по умолчанию
+}
+
+        localStorage.setItem('userData', JSON.stringify(user));
+        updateProfile();
+
+        document.getElementById('name').value = '';
+        document.getElementById('login').value = '';
+        document.getElementById('password').value = '';
+
+        alert('Пользователь зарегистрирован:', name, login, password);
+    } else {
+        alert('Все поля должны быть заполнены!');
+    }
+}
+
+function loadCartFromServer() {
+    var userData = JSON.parse(localStorage.getItem('userData'));
+    if (userData) {
+        cart.items = userData.cart; // Загружаем товары в корзину из данных пользователя
+        cart.updateCartUI();
+    }
+}
+
+function toggleForm() {
+    var form = document.getElementById('registrationForm');
+    if (form.style.display === "none") {
+        form.style.display = "block";
+    } else {
+        form.style.display = "none";
+    }
+}
+
+try {
+    function updateProfile() {
+        var userData = JSON.parse(localStorage.getItem('userData'));
+        if (userData) {
+            document.getElementById('username').textContent = userData.name;
+            var avatarElement = document.getElementById('avatar');
+            avatarElement.src = userData.avatar;
+
+            avatarElement.addEventListener('click', function() {
+                alert('Имя: ' + userData.name + '\nЛогин: ' + userData.login + '\nПороль: ' + userData.password);
+            });
+        }
+    }
+
+window.onload = function() {
+    var nameInput = document.getElementById('name');
+    var loginInput = document.getElementById('login');
+    var passwordInput = document.getElementById('password');
+    var submitButton = document.getElementById('submit');
+
+    nameInput.addEventListener('input', function() {
+        console.log('Имя: ' + this.value);
+    });
+
+    loginInput.addEventListener('input', function() {
+        console.log('Логин: ' + this.value);
+    });
+
+    passwordInput.addEventListener('input', function() {
+        console.log('Пароль: ' + this.value);
+    });
+
+    submitButton.addEventListener('click', function() {
+        registerUser();
+    });
+}; 
+
+    document.getElementById('avatar').addEventListener('click', function() {
+        var userData = JSON.parse(localStorage.getItem('userData'));
+        if (userData) {
+            alert('Имя: ' + userData.name + '\nЛогин: ' + userData.login + '\nПороль: ' + userData.password);
+        }
+    });
+
+} catch (error) {
+    console.log('Произошла ошибка в основном скрипте:', error);
+}
+
+window.onload = function() {
+// Массив для хранения отзывов
+let reviews = [
+    "Отличный продукт! Очень доволен покупкой.",
+    "Быстрая доставка, товар соответствует описанию.",
+    "Продавец был очень вежлив и помог мне с выбором.",
+    // добавьте больше отзывов по мере необходимости
+];
+
+let reviewInput = document.getElementById('reviewInput');
+let submitReviewButton = document.getElementById('submitReviewButton');
+let reviewsContainer = document.getElementById('reviewsContainer');
+
+submitReviewButton.addEventListener('click', function() {
+    let reviewText = reviewInput.value.trim();
+
+    if (reviewText) {
+        reviews.push(reviewText);
+
+        reviewInput.value = '';
+
+        updateReviewsDisplay();
+    } else {
+        alert('Пожалуйста, введите отзыв.');
+    }
+});
+
+function updateReviewsDisplay() {
+    reviewsContainer.innerHTML = '';
+
+    reviews.forEach(function(review, index) {
+        let reviewElement = document.createElement('p');
+        reviewElement.textContent = `Отзыв ${index + 1}: ${review}`;
+        reviewsContainer.appendChild(reviewElement);
+    });
+}
+}
+// Вызываем функцию для отображения отзывов при загрузке страницы
+updateReviewsDisplay();
+</script>
+<body>
+<header>
+        <div id="myElement">
+        <div id="top-panel">  
+        <div class="product-item cube appear">
+<div id="profile" onclick="updateProfile()">
+    <img id="avatar" onclick="showProfileInfo()" src="https://th.bing.com/th/id/OIP.KmaIyJGzWBD5PR9CuFpfbgHaHf?w=178&h=180&c=7&r=0&o=5&pid=1.7">
+    <p id="username"></p>
+</div>
+
+            <button onclick="toggleForm()">Регистрация</button>
+
+            <form id="registrationForm">
+                <label for="name">Имя:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="login">Логин:</label><br>
+                <input type="text" id="login" name="login"><br>
+                <label for="password">Пароль:</label><br>
+                <input type="password" id="password" name="password"><br>
+                <button type="button" onclick="registerUser()">Зарегистрироваться</button>
+            </form>
+
+            <div id="cart-content" style="display: none;"></div>
+            <button onclick="cart.toggleCart()">Корзина</button>
+            <div id="cart" style="display:none;"></div>
+            <input type="text" id="searchInput" placeholder="Введите товар">
+            <button class="buutton" onclick="searchProducts()"></button>
+            <div id="searchResults"></div>
+
+            <div id="top-panel">
+            <div id="myElement">
+                <!-- Filter Button -->
+                <button id="filterButton" onclick="toggleFilterForm()">Фильтр</button>
+
+                <!-- Filter Form -->
+                <div id="filterForm">
+                    <label for="category">Категория:</label><br>
+                    <input type="text" id="category"><br>
+                    <label for="price">Максимальная цена:</label><br>
+                    <input type="text" id="price"><br>
+                    <button onclick="applyFilter()">Применить фильтр</button>
+                <div id="products"></div>
+            </div>
+                <button id="settingsButton" onclick="toggleSettings()">Настройки</button>
+                <div id="settings" style="display:none;">
+
+            <h3>Мы в сотсетях:</h3>
+                <a href="https://www.instagram.com/ydacha_ferma?igsh=a294MjFlZWY4MTZ5" target="_blank">Перейти в Instagram канал: Удачная ферма</a>
+                </br>
+                <a href="https://chat.whatsapp.com/Lu7A5a9hkdRErmmZ662Jzh" target="_blank">Перейти в WhatsApp группу: Удачная ферма</a>
+
+            </div>
+    </div>
+</header>
+    <section> 
+<div id="myElement"> 
+<div id="top-panel">
+<h2>Товары:</h2>
+<div class="product-item cube appear">
+    <img src="https://th.bing.com/th?id=OIP.PwPE8_wFP1rI_1_lRN6KFQHaIf&w=233&h=267&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" style="width:100px; height:100px; border-radius:15%;">
+    <h3>Альба</h3>
+    <p>Сорт клубники "Альба"</p>
+    <p>Цена: 500 тенге</p>
+    <button onclick='addToCart("Альба", "Сорт клубники Альба", 500)'>Добавить в корзину</button>
+</div>
+
+<div class="product-item cube appear">
+    <img src="https://th.bing.com/th?id=OIP._VzY8anmLooa3i23LPyA2QHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" style="width:100px; height:100px; border-radius:15%;">
+    <h3>Дюк</h3>
+    <p>Сорт голубики "Дюк"</p>
+    <p>Цена: 6000 тенге</p>
+    <button onclick='addToCart("Дюк", "Сорт голубики Дюк", 6000)'>Добавить в корзину</button>
+</div>
+
+<div class="product-item cube appear">
+    <img src="https://th.bing.com/th?id=OIP.3tL_m5TEM0usbJI8ma6AuQHaJ4&w=216&h=288&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" style="width:100px; height:100px; border-radius:15%;">
+    <h3>Августин</h3>
+    <p>Сорт винограда "Августин"</p>
+    <p>Цена: 1300 тенге</p>
+    <button onclick='addToCart("Августин", "Сорт виноград Августин", 1300)'>Добавить в корзину</button>
+</div>
+
+<div class="product-item cube appear">
+    <img src="https://th.bing.com/th/id/OIP.Dwog-z6NjByJW8kk62I_cQHaHZ?w=171&h=180&c=7&r=0&o=5&pid=1.7" style="width:100px; height:100px; border-radius:15%;">
+    <h3>Осейдж</h3>
+    <p>Сорт еживика "Осейдж"</p>
+    <p>Цена: 1500 тенге</p>
+    <button onclick='addToCart("Осейдж", "Сорт еживики Осейдж", 1500)'>Добавить в корзину</button>
+</div>
+
+<div class="product-item cube appear">
+    <img src="https://th.bing.com/th/id/OIP.1kMXsTKN9fI9-Z0oVnrI4gAAAA?w=167&h=186&c=7&r=0&o=5&pid=1.7" style="width:100px; height:100px; border-radius:15%;">
+    <h3>Чудо</h3>
+    <p>Сорт вишня "Чудо"</p>
+    <p>Цена: 1800 тенге</p>
+    <button onclick='addToCart("Чудо", "Сорт вишни Чудо", 1800)'>Добавить в корзину</button>
+</div>
+
+<div class="product-item cube appear">
+    <img src="https://th.bing.com/th/id/OIP.O53g6JxNjF3cKoq6bTxK-AHaHa?w=181&h=181&c=7&r=0&o=5&pid=1.7" style="width:100px; height:100px; border-radius:15%;">
+    <h3>Царский</h3>
+    <p>Сорт абрикос "Царский"</p>
+    <p>Цена: 1800 тенге</p>
+    <button onclick='addToCart("Царский", "Сорт абрикоса Царский", 1800)'>Добавить в корзину</button>
+</div>
+<div class="product-item cube appear">
+    <img src="https://th.bing.com/th/id/OIP.fWaQvzqxDM6tSHkhZ1qXrQHaGD?w=235&h=194&c=7&r=0&o=5&pid=1.7" style="width:100px; height:100px; border-radius:15%;">
+    <h3>Мраморная</h3>
+    <p>Сорт груша "Мраморная"</p>
+    <p>Цена: 1800 тенге</p>
+    <button onclick='addToCart("Мраморная", "Сорт груши Мраморная", 1800)'>Добавить в корзину</button>
+</div>
+
+<div class="product-item cube appear">
+    <img src="https://th.bing.com/th/id/OIP.FGhcAP9NkjRLzX8BjyeKrgHaFj?w=223&h=180&c=7&r=0&o=5&pid=1.7" style="width:100px; height:100px; border-radius:15%;">
+    <h3>Ламарка</h3>
+    <p>Сорт ирга "Ламарка"</p>
+    <p>Цена: 2200 тенге</p>
+    <button onclick='addToCart("Ламарка", "Сорт ирги Ламарка", 2200)'>Добавить в корзину</button>
+</div>
+
+<div class="product-item cube appear">
+    <img src="https://th.bing.com/th/id/OIP.RTObENzI70jjRDukyWvraAHaGG?w=195&h=180&c=7&r=0&o=5&pid=1.7" style="width:100px; height:100px; border-radius:15%;">
+    <h3>Бен Лир</h3>
+    <p>Сорт клюква "Бен Лир"</p>
+    <p>Цена: 2000 тенге</p>
+    <button onclick='addToCart("Бен Лир", "Сорт клюквы Бен Лир", 2000)'>Добавить в корзину</button>
+</div>
+    </section>
+
+    <footer>
+        <p>© 2024 Удачная ферма shop</p>
+    </footer>
+</div>
+</body>
+</html>
